@@ -86,8 +86,6 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 
 # Starter Project
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HlC0FD95Rxc?si=TMSMpwka0znPHmGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 For my starter project I made a retro arcade console which plays Tetris. It works by connecting components with a circuit board. Some challenges that I faced while making this learning how to soder and sodering on the USB port the wrong way around.
