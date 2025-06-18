@@ -90,6 +90,8 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 
 For my starter project I made a retro arcade console which plays Tetris. It works by connecting components with a circuit board. Some challenges that I faced while making this learning how to soder and sodering on the USB port the wrong way around.
 
+![Headshot](BenF.HEIC)
+
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
