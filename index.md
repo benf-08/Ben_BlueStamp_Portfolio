@@ -93,7 +93,7 @@ To watch the BSE tutorial on how to create a portfolio, click here.-->
 
 For my starter project I made a retro arcade console which plays Tetris. It works by connecting components with a circuit board. These components are buttons, a screen, an on off toggle, and a battery pack. Some challenges that I faced while making this learning how to soder and sodering on the USB port the wrong way around.
 
-<img src=BenF.jpg width="300" height="400">
+<img src="BenF.jpg" width="300" height="400">
 
 
 # Other Resources/Examples
