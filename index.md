@@ -52,8 +52,8 @@ Raspberry Pi being accessed and controled from my computer
 <!---Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser.--->
 
 Figure 1 & 2: Corner & Side Mounting Bracket
-<img src="Capture6.png" width="400" height="400">
 
+<img src="Capture6.png" width="400" height="400">
 <img src="Capture5.png" width="400" height="400">
 
 Figures 1 & 2:
