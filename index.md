@@ -51,7 +51,13 @@ Raspberry Pi being accessed and controled from my computer
 # Schematics 
 <!---Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser.--->
 
-Figure 1: Corner Mounting Bracket
+Figure 1 & 2: Corner & Side Mounting Bracket
+<img src="Capture6.png" width="400" height="400">
+
+<img src="Capture5.png" width="400" height="400">
+
+Figures 1 & 2:
+The thickness of the monitor attached to the plywood backboard is greater than that of the frame. So I had to design some brackets to mount the backboard montior assembly to be back of the frame. Both types of brackets are 3cm by 3cm squares that are 0.6cm thick. There is a 0.2cm cut into the brackets for the plywood to slide into. The cut leaves 1cm where the bracket would overlap with the frame to allow for mounting the brackets to the frame with a screw.
 
 
 <!---# Code
