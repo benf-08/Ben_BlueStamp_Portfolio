@@ -1,17 +1,9 @@
 # Smart Mirror
-For my project I am building a smart mirror than runs using a Raspberry Pi. The mirror displays information like time, weather, and news to the user.
-
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
+For my project I am building a smart mirror than runs using a Raspberry Pi. The mirror displays information like time, weather, and news to the user. The mirror runs software that allows for modules to be displayed onto the Magic Mirror. These modules use APIs to recieve the information that is displayed and can be downloaded off the internet.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Ben F | Homestead | Mechanical Engineering | Incoming Junior
-
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
 <img src="BenF.jpg" width="300" height="400">
   
@@ -52,7 +44,6 @@ My project is a smart mirror that runs on Raspberry Pi which runs the code to di
 Raspberry Pi being accessed and controled from my computer
 
 # Schematics 
-<!---Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser.--->
 
 Figure 1 & 2: Corner & Side Mounting Bracket
 
