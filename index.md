@@ -49,7 +49,7 @@ The thickness of the monitor attached to the plywood backboard is greater than t
 
 Figure 3: DHT11 Temperature Sensor wiring diagram
 
-<img src="Schematic.png" width="680" height="400">
+<img src="Schematic.png" width="300" height="400">
 
 
 <!---# Code
