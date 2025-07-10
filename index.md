@@ -47,6 +47,10 @@ Figure 1 & 2: Corner & Side Mounting Bracket
 Figures 1 & 2:
 The thickness of the monitor attached to the plywood backboard is greater than that of the frame. So I had to design some brackets to mount the backboard montior assembly to be back of the frame. Both types of brackets are 3cm by 3cm squares that are 0.6cm thick. There is a 0.2cm cut into the brackets for the plywood to slide into. The cut leaves 1cm where the brackets would overlap with the frame to allow for mounting the brackets to the frame with a screw.
 
+Figure 3: DHT11 Temperature Sensor wiring diagram
+
+<img src="Schematic.png" width="680" height="400">
+
 
 <!---# Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
