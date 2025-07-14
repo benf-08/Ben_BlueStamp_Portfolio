@@ -52,14 +52,134 @@ Figure 3: DHT11 Temperature Sensor wiring diagram
 <img src="Schematic.png" width="300" height="400">
 
 
-<!---# Code
+# Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
-```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+```js
+et config = {
+	address: "localhost",	// Address to listen on, can be:
+							// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
+							// - another specific IPv4/6 to listen on a specific interface
+							// - "0.0.0.0", "::" to listen on any interface
+							// Default, when address config is left out or empty, is "localhost"
+	port: 8080,
+	basePath: "/",	// The URL path where MagicMirror² is hosted. If you are using a Reverse proxy
+									// you must set the sub path here. basePath must end with a /
+	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"],	// Set [] to allow all IP addresses
+									// or add a specific IPv4 of 192.168.1.5 :
+									// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
+									// or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
+									// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
+
+	useHttps: false,			// Support HTTPS or not, default "false" will use HTTP
+	httpsPrivateKey: "",	// HTTPS private key path, only require when useHttps is true
+	httpsCertificate: "",	// HTTPS Certificate path, only require when useHttps is true
+
+	language: "en",
+	locale: "en-US",   // this variable is provided as a consistent location
+			   // it is currently only used by 3rd party modules. no MagicMirror code uses this value
+			   // as we have no usage, we  have no constraints on what this field holds
+			   // see https://en.wikipedia.org/wiki/Locale_(computer_software) for the possibilities
+
+	logLevel: ["INFO", "LOG", "WARN", "ERROR"], // Add "DEBUG" for even more logging
+	timeFormat: 12,
+	units: "imperial",
+
+	modules: [
+		{
+			module: "alert",
+		},
+		{
+			module: "clock",
+			position: "top_bar",
+			config: {
+				timeFormat: "12",
+				timezone: "America/Los_Angeles"
+			},
+		},
+		{
+			module: "weather",
+			position: "top_right",
+			config: {
+				weatherProvider: "weathergov",
+				type: "current",
+				lat: 37.3688,
+				lon: -122.0363,
+				showIndoorTemperature: true,
+				showIndoorHumidity: true,
+			}
+		},
+		{
+			module: "weather",
+			position: "top_right",
+			header: "Weather Forecast",
+			config: {
+				weatherProvider: "weathergov",
+				type: "forecast",
+				lat: 37.3688,
+				lon: -122.0363
+			}
+		},
+		{
+			module: "newsfeed",
+			position: "bottom_bar",
+			config: {
+				feeds: [
+					{
+						title: "New York Times",
+						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+						broadcastNewsFeeds: true,
+					}
+				],
+				showSourceTitle: true,
+				showPublishDate: true,
+				broadcastNewsFeeds: true,
+				broadcastNewsUpdates: true
+			}
+		},
+		{
+			module: "MMM-MyScoreboard",
+			position: "top_left",
+			classes: "default everyone",
+			header: "Sports",
+			config: {
+				showLeagueSeparators: true,
+				colored: true,
+				viewStyle: "largeLogos",
+				sports: [
+				{
+					league: "NBA",
+					teams: ["GSW"],
+					groups: ["West"]
+				},
+				{
+					league: "MLB",
+					teams: ["SF"]
+				},
+				{
+					league: "NFL",
+					teams: ["SF"],
+					groups: ["NFC West"]
+				}
+				]
+
+			}
+		},
+		{
+			module: "MMM-DHT-Sensor",
+			config:{
+				sensorPin: 2,
+				sensorType: 11,
+				units: "imperial",
+				updateInterval: 0.5,
+			}
+		},
+	]
+};
+
+<!---/*************** DO NOT EDIT THE LINE BELOW ***************/
+if (typeof module !== "undefined") { module.exports = config; }
+
 }
 
 void loop() {
@@ -67,7 +187,6 @@ void loop() {
 
 }
 ```
- --->
 # Bill of Materials
 
 | **Part** | **Note** | **Price** | **Link** |
