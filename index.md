@@ -21,7 +21,7 @@ However, when I tried to assemble this I found out that the frame was to brittle
 
 # Second Milestone
 
-<!---<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For my second milestone, I was able to get the Magic Mirror code running on my Raspberry Pi. To do this I followed the documentation for the Magic Mirror. First downloading Node onto the Raspberry Pi. Then, I cloned the Magic Mirror repository onto the Pi and entering it with the cd command. However, when I went to install the program it gave me an error stating that my Node version was not correct. I then went online to find out how to update my Node version to the correct version. I followed the online instructions to update it. After that, The program was able to be installed onto the Pi. I then ran the program on the Pi to find out that I would like to change how it is configured to give me the correct weather and time for San Jose. I went back into the documentation to find out how to change these and used Visual Studio Code to edit the code so that it would display the correct information. Before I complete my final milestone, I need to assemble my mirror, connect it to the Raspberry Pi, and make sure that the code runs without problems on it.
 <img src="Capture3.png" width="680" height="400">
@@ -53,8 +53,8 @@ Figure 3: DHT11 Temperature Sensor wiring diagram
 
 
 # Code
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
+This is how I have configured my MagicMirror:
 ```js
 et config = {
 	address: "localhost",	// Address to listen on, can be:
@@ -180,6 +180,18 @@ et config = {
 <!---/*************** DO NOT EDIT THE LINE BELOW ***************/
 if (typeof module !== "undefined") { module.exports = config; }
 ```
+Downloading MagicMirrorOS:
+1. Download Node.js
+2. Execute ```git``` to check if git is install, install it if it isn't already
+3. Clone the MagicMirror repostitory by running ```git clone https://github.com/MagicMirrorOrg/MagicMirror```
+4. Enter the MagicMirror respostory with ```cd MagicMirror```
+5. Install MagicMirrorOS with ```npm run install-mm```
+6. Copy the config sample file ```cp config/config.js.sample config/config.js```
+7. Start MagicMirrorOS with ```npm run start```
+
+Custom Modules I installed:
+
+
 # Bill of Materials
 
 | **Part** | **Note** | **Price** | **Link** |
