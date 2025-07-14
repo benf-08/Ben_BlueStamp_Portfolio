@@ -191,6 +191,7 @@ Downloading MagicMirrorOS:
 
 Custom Modules I installed:
 <a href="https://github.com/dathbe/MMM-MyScoreboard"> MMM-MyScoreboard </a>
+<a href="https://github.com/glitch452/MMM-LocalTemperature"> MMM-LocalTemperature </a>
 
 # Bill of Materials
 
