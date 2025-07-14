@@ -190,7 +190,7 @@ Downloading MagicMirrorOS:
 7. Start MagicMirrorOS with ```npm run start```
 
 Custom Modules I installed:
-
+<a href="https://github.com/dathbe/MMM-MyScoreboard"> MMM-MyScoreboard </a>
 
 # Bill of Materials
 
