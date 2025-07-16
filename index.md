@@ -5,7 +5,7 @@ For my project I am building a smart mirror than runs using a Raspberry Pi. The 
 |:--:|:--:|:--:|:--:|
 | Ben F | Homestead | Mechanical Engineering | Incoming Junior
 
-<img src="BenF.jpg" width="300" height="400">
+<img src="BenF.jpg" width="300" height="400"> <img src="IMG_2981.jpeg" width="300" height="400">
   
 
 # Final Milestone
