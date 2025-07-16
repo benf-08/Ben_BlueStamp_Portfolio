@@ -55,6 +55,10 @@ Figure 3: DHT11 Temperature Sensor wiring diagram
 
 <img src="Schematic.png" width="300" height="400">
 
+Figure 4: MagicMirror Frame Diagram
+
+<img src="MagicMirrorDiagram.jpg" width="400" height="225">
+
 
 # Code
 
