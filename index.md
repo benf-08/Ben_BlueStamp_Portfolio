@@ -20,7 +20,7 @@ However, when I tried to assemble this I found out that the frame was to brittle
 
 <img src="IMG_2980.jpeg" width="300" height="400">
 
-After the glue had dried, I used sandpaper to smooth out the edges of my mirror. Then, I used double sided Gorilla tape to mount the monitor inside my mirror's frame. After that, using a XACTO knife, I cut the reflective vinyl to the dimensions of my monitor so that it could fit inside the frame.
+After the glue had dried, I used sandpaper to smooth out the edges of my mirror. Then, I used double sided Gorilla tape to mount the monitor inside my mirror's frame. After that, using a XACTO knife, I cut the reflective vinyl to the dimensions of my monitor so that it could fit inside the frame. Then using the same double sided Gorilla tape, I taped the vinyl to the edges of the monitor.
 
 
 # Second Milestone
