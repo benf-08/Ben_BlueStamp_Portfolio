@@ -214,7 +214,7 @@ Custom Modules I installed:
 | 12 x 18 x 0.04 Inch Acrylic See-Through Mirror | Shows a reflection while letting light pass through | $29.99 | <a href="https://a.co/d/3HWUPE6"> Link </a> |
 | 6 Pack Basswood Sheets for Crafts 1/8x12x18 | Backboard for the mirror assembly | $19.99 | <a href="https://a.co/d/7VZWMLw"> Link </a> |
 | Edge-glued Board by Walnut Hollow, Pine, 12" x 16" x 3/4" | Wood to assemble frame with | $19.50 | <a href="https://a.co/d/bsTsKR3"> Link </a> |
-| Gorilla Heavy Duty Double Sided Mounting Tape, Black Tape, 1" x 120" | Assembling Smart Mirror | $19.50 | <a href="https://a.co/d/elYowfY"> Link </a> |
+| Gorilla Heavy Duty Double Sided Mounting Tape, Black Tape, 1" x 120" | Assembling Smart Mirror | $12.24 | <a href="https://a.co/d/elYowfY"> Link </a> |
 
 # Starter Project
 
