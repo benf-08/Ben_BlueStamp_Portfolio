@@ -26,6 +26,8 @@ In addition to assembling the mirror, I added a custom module to display the spo
 
 To add the temperature module, I wired up a DHT11 sensor, which measures temperature and humidity, to my raspberry pi (Figure 3). To do this I used an online pinout diagram for my raspberry pi. After connecting the DHT11, I downloaded the the Adafruit DHT library so that the sensor could properly function. Then, I installed a custom module so that the MagicMirror program could process the data coming from the sensor. However, when I tested the sensor for the first time, the temperature reading was off by around 50 degrees. To fix this, I went into the code of the module, subtracting 50 degrees from the temperature value that the module produces.
 
+<img src="capture7.png" width="680" height="400">
+
 
 # Second Milestone
 
