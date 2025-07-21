@@ -1,4 +1,4 @@
-# Smart Mirror
+# Smart Mirror & RC Car
 For my project I am building a smart mirror than runs using a Raspberry Pi. The mirror displays information like time, weather, and news to the user. The mirror runs software that allows for modules to be displayed onto the Magic Mirror. These modules use APIs to recieve the information that is displayed and can be downloaded off the internet.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
