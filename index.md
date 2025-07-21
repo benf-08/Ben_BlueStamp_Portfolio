@@ -22,6 +22,10 @@ However, when I tried to assemble this I found out that the frame was to brittle
 
 After the glue had dried, I used sandpaper to smooth out the edges of my mirror. Then, I used double sided Gorilla tape to mount the monitor inside my mirror's frame. After that, using a XACTO knife, I cut the reflective vinyl to the dimensions of my monitor so that it could fit inside the frame. Then using the same double sided Gorilla tape, I taped the vinyl to the edges of the monitor.
 
+In addition to assembling the mirror, I added a custom module to display the sports games that will occur and a module to measure the temperature and humidity of the surrounding environment. While installing the sports module, I had trouble getting it to display on the mirror. I tried debugging it with multiple different methods, including reinstalling the module. However, I realized that the module was an outdated version and that I needed to download the up to date version from a different Github repository. After downloading and installing this up to date version of the module, the module was able to be displayed on the mirror. 
+
+To add the temperature module, I wired up a DHT11 sensor, which measures temperature and humidity, to my raspberry pi (Figure 3). To do this I used an online pinout diagram for my raspberry pi. After connecting the DHT11, I downloaded the the Adafruit DHT library so that the sensor could properly function. Then, I installed a custom module so that the MagicMirror program could process the data coming from the sensor. However, when I tested the sensor for the first time, the temperature reading was off by around 50 degrees. To fix this, I went into the code of the module, subtracting 50 degrees from the temperature value that the module produces.
+
 
 # Second Milestone
 
