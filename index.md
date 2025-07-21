@@ -1,5 +1,9 @@
 # Smart Mirror & RC Car
-For my project I am building a smart mirror than runs using a Raspberry Pi. The mirror displays information like time, weather, and news to the user. The mirror runs software that allows for modules to be displayed onto the Magic Mirror. These modules use APIs to recieve the information that is displayed and can be downloaded off the internet.
+For my projects I am building a smart mirror than runs using a Raspberry Pi and a RC car that can be controlled by an IR remote. 
+
+The mirror displays information like time, weather, and news to the user. The mirror runs software that allows for modules to be displayed onto the Magic Mirror. These modules use APIs to recieve the information that is displayed and can be downloaded off the internet. 
+
+The RC car runs off of an arduino which is connected to the IR detector. The IR detector tells the arduino to move the car along with controlling the different features of the car.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -221,6 +225,18 @@ Custom Modules I installed:
 | 6 Pack Basswood Sheets for Crafts 1/8x12x18 | Backboard for the mirror assembly | $19.99 | <a href="https://a.co/d/7VZWMLw"> Link </a> |
 | Edge-glued Board by Walnut Hollow, Pine, 12" x 16" x 3/4" | Wood to assemble frame with | $19.50 | <a href="https://a.co/d/bsTsKR3"> Link </a> |
 | Gorilla Heavy Duty Double Sided Mounting Tape, Black Tape, 1" x 120" | Assembling Smart Mirror | $12.24 | <a href="https://a.co/d/elYowfY"> Link </a> |
+
+# RC Car
+
+My RC car runs off of an ardunio connected to an IR sensor. This sensor receives commands from a remote which tells the ardunio what to do. Besides from driving, the car can make beeping noises, has attached lights that can turn on and off, and can display messages on a screen.
+
+To assemble the car I first followed the online instructions provided in the car kit, attaching the motors, the motor controller module, the arduino, the wheels, battery, and finally connecting it all together. After the basic parts of the car were attached, I downloaded arduino IDE onto my computer and connected the ardunio to arduino IDE. I then imported the IR library so that the car could work. Then I copied the basic code that allows the remote to control the car. This code uses an if loop with a set of if statements to constantly recieve and process inputs from the remote
+
+The first thing that I added to the car were four lights that could be toggled on and off by the remote. To power the lights, I connected them to 5V power through a resistor, then from there I connected the four lights to it. I mounted two of the lights in the breadboard up in the front of the car and mounted two of them in the back, using holes that were in the frame of the car. Then I modified the code by adding an extra if else statement to the main if loop, which calls a method with an int value of -1. In that method, the int value is mulitpied with a field variable of 1 or -1, then based on that value the method uses an if statement to determine weather to turn the lights on or off.
+
+I then added a buzzer to the car. To control the buzzer I three new if statements that call three new methods, each that makes a different pattern of beeps. When I was programming this, an issue came up in which the buzzer would disable the main if loop when the buzzer method was called. After I tried to debug this in multiple ways, I found out that it was because of a conflict in the timer of the arduino. I found out that the IR reciever and the buzzer would both try to use the same timer, causing the IR module to shut off when the buzzer method was called. To fix this, I had the the buzzer methods pause the IR reciever's timer before the buzzer was activated and resume the timer when the buzzer stopped.
+
+Finally, I added an ICD screen to the car so that the car can display messages. I connected this screen to the analog inputs on the arduino and the 5V power and used zip ties to mount the screen onto the car. I then installed the LiquidCrystal library and imported it into the program. Then I intialized the ICD and turned on the backlight with code. Then using the existing buzzer methods, I had the screen display a message whenever the buzzer was pressed. However, when another method that prints a different method was called the previous text would still remain depending on the length of the text. To fix this, I researched about the lcd, finding out that the ```clear()``` method could be called which would clear the LCD screen.
 
 # Starter Project
 
