@@ -230,6 +230,8 @@ Custom Modules I installed:
 
 My RC car runs off of an ardunio connected to an IR sensor. This sensor receives commands from a remote which tells the ardunio what to do. Besides from driving, the car can make beeping noises, has attached lights that can turn on and off, and can display messages on a screen.
 
+<img src="IMG_2992.jpeg" width="300" height="400">
+
 To assemble the car I first followed the online instructions provided in the car kit, attaching the motors, the motor controller module, the arduino, the wheels, battery, and finally connecting it all together. After the basic parts of the car were attached, I downloaded arduino IDE onto my computer and connected the ardunio to arduino IDE. I then imported the IR library so that the car could work. Then I copied the basic code that allows the remote to control the car. This code uses an if loop with a set of if statements to constantly recieve and process inputs from the remote
 
 The first thing that I added to the car were four lights that could be toggled on and off by the remote. To power the lights, I connected them to 5V power through a resistor, then from there I connected the four lights to it. I mounted two of the lights in the breadboard up in the front of the car and mounted two of them in the back, using holes that were in the frame of the car. Then I modified the code by adding an extra if else statement to the main if loop, which calls a method with an int value of -1. In that method, the int value is mulitpied with a field variable of 1 or -1, then based on that value the method uses an if statement to determine weather to turn the lights on or off.
