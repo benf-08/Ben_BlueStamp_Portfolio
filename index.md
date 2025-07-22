@@ -240,6 +240,289 @@ I then added a buzzer to the car. To control the buzzer I three new if statement
 
 Finally, I added an ICD screen to the car so that the car can display messages. I connected this screen to the analog inputs on the arduino and the 5V power and used zip ties to mount the screen onto the car. I then installed the LiquidCrystal library and imported it into the program. Then I intialized the ICD and turned on the backlight with code. Then using the existing buzzer methods, I had the screen display a message whenever the buzzer was pressed. However, when another method that prints a different method was called the previous text would still remain depending on the length of the text. To fix this, I researched about the lcd, finding out that the ```clear()``` method could be called which would clear the LCD screen.
 
+#Car Code
+
+```c++
+#include <IRremote.h>
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+const int IR_RECEIVE_PIN = 12;  // Define the pin number for the IR Sensor
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+const int A_1B = 5;
+const int A_1A = 6;
+const int B_1B = 9;
+const int B_1A = 10;
+const int LIGHTS = 2;
+constexpr int BUZZ = 3;
+
+
+int speed = 150;
+int onOff = -1;
+
+void setup() {
+  Serial.begin(9600);
+
+  //motor
+  pinMode(A_1B, OUTPUT);
+  pinMode(A_1A, OUTPUT);
+  pinMode(B_1B, OUTPUT);
+  pinMode(B_1A, OUTPUT);
+  pinMode(LIGHTS, OUTPUT);
+  pinMode(BUZZ, OUTPUT);
+  lcd.init();  //initialize the lcd
+  lcd.backlight();  //open the backlight
+
+  //IR remote
+  IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);  // Start the IR receiver // Start the receiver
+  Serial.println("REMOTE CONTROL START");
+
+}
+
+void loop() {
+
+  if (IrReceiver.decode()) {
+    //    Serial.println(results.value,HEX);
+    String key = decodeKeyValue(IrReceiver.decodedIRData.command);
+    if (key != "ERROR") {
+      Serial.println(key);
+
+      if (key == "+") {
+        speed += 50;
+      } else if (key == "-") {
+        speed -= 50;
+      } else if (key == "2") {
+        moveForward(speed);
+        delay(1000);
+      } else if (key == "1") {
+        moveLeft(speed);
+      } else if (key == "3") {
+        moveRight(speed);
+      } else if (key == "4") {
+        turnLeft(speed);
+      } else if (key == "6") {
+        turnRight(speed);
+      } else if (key == "7") {
+        backLeft(speed);
+      } else if (key == "9") {
+        backRight(speed);
+      } else if (key == "8") {
+        moveBackward(speed);
+        delay(1000);
+      } else if ( key == "POWER"){
+        lights(-1);
+      } else if ( key == "PLAY/PAUSE"){
+        buzzer();
+        Serial.println("exited");
+      } else if ( key == "BACKWARD"){
+        buzzer2();
+        Serial.println("exited");
+      } else if ( key == "FORWARD"){
+        buzzer3();
+        Serial.println("exited");
+      }
+
+      if (speed >= 255) {
+        speed = 255;
+      }
+      if (speed <= 0) {
+        speed = 0;
+      }
+      delay(500);
+      stopMove();
+    }
+
+    IrReceiver.resume();  // Enable receiving of the next value
+  }
+}
+
+void lights(int num){
+  onOff = (onOff*num);
+  if (onOff == 1){
+    digitalWrite(LIGHTS, 1);
+    lcd.setCursor(1, 0);
+  }
+  else{
+    digitalWrite(LIGHTS, 0);
+    lcd.setCursor(1, 0);
+  }
+}
+void buzzer(){
+  lcd.setCursor(1, 0);
+  lcd.clear();
+  lcd.print("beep beep");
+  IrReceiver.stopTimer();
+  tone(BUZZ, 500, 1000);
+  delay(1000);
+  IrReceiver.restartTimer();
+}
+void buzzer2(){
+  lcd.setCursor(1, 0);
+  lcd.clear();
+  lcd.print("1v1 on clash");
+  IrReceiver.stopTimer();
+  tone(BUZZ, 500, 250);
+  delay(300);
+  tone(BUZZ, 500, 250);
+  delay(300);
+  tone(BUZZ, 500, 250);
+  delay(300);
+  tone(BUZZ, 500, 250);
+  delay(300);
+  tone(BUZZ, 500, 250);
+  delay(300);
+  tone(BUZZ, 500, 250);
+  delay(300);
+  IrReceiver.restartTimer();
+}
+
+void buzzer3(){
+  lcd.setCursor(1, 0);
+  lcd.clear();
+  lcd.print("let me play");
+  lcd.setCursor(0, 1);
+  lcd.print("clash pls");
+  IrReceiver.stopTimer();
+  tone(BUZZ, 500, 250);
+  delay(300);
+  tone(BUZZ, 500, 250);
+  delay(600);
+  tone(BUZZ, 500, 250);
+  delay(300);
+  tone(BUZZ, 500, 250);
+  delay(600);
+  tone(BUZZ, 500, 250);
+  delay(300);
+  tone(BUZZ, 500, 250);
+  delay(300);
+  IrReceiver.restartTimer();
+}
+
+void moveForward(int speed) {
+  lcd.clear();
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void moveBackward(int speed) {
+  lcd.clear();
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void turnRight(int speed) {
+  lcd.clear();
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void turnLeft(int speed) {
+  lcd.clear();
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void moveLeft(int speed) {
+  lcd.clear();
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, speed);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
+void moveRight(int speed) {
+  lcd.clear();
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, speed);
+  analogWrite(B_1A, 0);
+}
+
+void backLeft(int speed) {
+  lcd.clear();
+  analogWrite(A_1B, speed);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
+void backRight(int speed) {
+  lcd.clear();
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, speed);
+}
+
+void stopMove() {
+  analogWrite(A_1B, 0);
+  analogWrite(A_1A, 0);
+  analogWrite(B_1B, 0);
+  analogWrite(B_1A, 0);
+}
+
+
+String decodeKeyValue(long result)
+{
+  switch(result){
+    case 0x16:
+      return "0";
+    case 0xC:
+      return "1"; 
+    case 0x18:
+      return "2"; 
+    case 0x5E:
+      return "3"; 
+    case 0x8:
+      return "4"; 
+    case 0x1C:
+      return "5"; 
+    case 0x5A:
+      return "6"; 
+    case 0x42:
+      return "7"; 
+    case 0x52:
+      return "8"; 
+    case 0x4A:
+      return "9"; 
+    case 0x9:
+      return "+"; 
+    case 0x15:
+      return "-"; 
+    case 0x7:
+      return "EQ"; 
+    case 0xD:
+      return "U/SD";
+    case 0x19:
+      return "CYCLE";         
+    case 0x44:
+      return "PLAY/PAUSE";   
+    case 0x43:
+      return "FORWARD";   
+    case 0x40:
+      return "BACKWARD";   
+    case 0x45:
+      return "POWER";   
+    case 0x47:
+      return "MUTE";   
+    case 0x46:
+      return "MODE";       
+    case 0x0:
+      return "ERROR";   
+    default :
+      return "ERROR";
+    }
+}
+```
+
 # Starter Project
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HlC0FD95Rxc?si=TMSMpwka0znPHmGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
