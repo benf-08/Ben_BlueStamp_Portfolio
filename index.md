@@ -240,6 +240,10 @@ I then added a buzzer to the car. To control the buzzer I three new if statement
 
 Finally, I added an ICD screen to the car so that the car can display messages. I connected this screen to the analog inputs on the arduino and the 5V power and used zip ties to mount the screen onto the car. I then installed the LiquidCrystal library and imported it into the program. Then I intialized the ICD and turned on the backlight with code. Then using the existing buzzer methods, I had the screen display a message whenever the buzzer was pressed. However, when another method that prints a different method was called the previous text would still remain depending on the length of the text. To fix this, I researched about the lcd, finding out that the ```clear()``` method could be called which would clear the LCD screen.
 
+# Car Schematics
+
+<img src="dtmmrsam.png" width="400" height="300">
+
 # Car Code
 
 ```c++
