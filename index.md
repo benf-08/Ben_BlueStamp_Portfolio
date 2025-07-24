@@ -213,19 +213,6 @@ Custom Modules I installed:
 
 <a href="https://github.com/glitch452/MMM-LocalTemperature"> MMM-LocalTemperature </a>
 
-# Bill of Materials
-
-| **Part** | **Note** | **Price** | **Link** |
-|:--:|:--:|:--:|:--:|
-|CanaKit Raspberry Pi 4 4GB Starter PRO Kit | Running MagicMirrorOS | $139.99 | <a href="https://a.co/d/fWeGlak"> Link </a> |
-| 15.6’’ FHD IPS Portable Monitor | Displays MagicMirrorOS to the user | $81.99 | <a href="https://a.co/d/0VFRcFx"> Link </a> |
-| Anker New Nylon USB C to USB C Cable (6ft 60W, 2-Pack) | Cables to power the Raspberry Pi and Monitor | $12.99 | <a href="https://a.co/d/dEYt4i2"> Link </a> |
-| Nekmit Dual Port USB C Wall Charger, 40W PD | Powers Raspberry Pi and Monitor | $26.99 | <a href="https://a.co/d/g5ZpG17"> Link </a> |
-| 12 x 18 x 0.04 Inch Acrylic See-Through Mirror | Shows a reflection while letting light pass through | $29.99 | <a href="https://a.co/d/3HWUPE6"> Link </a> |
-| 6 Pack Basswood Sheets for Crafts 1/8x12x18 | Backboard for the mirror assembly | $19.99 | <a href="https://a.co/d/7VZWMLw"> Link </a> |
-| Edge-glued Board by Walnut Hollow, Pine, 12" x 16" x 3/4" | Wood to assemble frame with | $19.50 | <a href="https://a.co/d/bsTsKR3"> Link </a> |
-| Gorilla Heavy Duty Double Sided Mounting Tape, Black Tape, 1" x 120" | Assembling Smart Mirror | $12.24 | <a href="https://a.co/d/elYowfY"> Link </a> |
-
 # RC Car
 
 My RC car runs off of an ardunio connected to an IR sensor. This sensor receives commands from a remote which tells the ardunio what to do. Besides from driving, the car can make beeping noises, has attached lights that can turn on and off, and can display messages on a screen.
@@ -526,6 +513,20 @@ String decodeKeyValue(long result)
     }
 }
 ```
+# Bill of Materials
+
+| **Part** | **Note** | **Price** | **Link** |
+|:--:|:--:|:--:|:--:|
+|CanaKit Raspberry Pi 4 4GB Starter PRO Kit | Running MagicMirrorOS | $139.99 | <a href="https://a.co/d/fWeGlak"> Link </a> |
+| 15.6’’ FHD IPS Portable Monitor | Displays MagicMirrorOS to the user | $81.99 | <a href="https://a.co/d/0VFRcFx"> Link </a> |
+| Anker New Nylon USB C to USB C Cable (6ft 60W, 2-Pack) | Cables to power the Raspberry Pi and Monitor | $12.99 | <a href="https://a.co/d/dEYt4i2"> Link </a> |
+| Nekmit Dual Port USB C Wall Charger, 40W PD | Powers Raspberry Pi and Monitor | $26.99 | <a href="https://a.co/d/g5ZpG17"> Link </a> |
+| 12 x 18 x 0.04 Inch Acrylic See-Through Mirror | Shows a reflection while letting light pass through | $29.99 | <a href="https://a.co/d/3HWUPE6"> Link </a> |
+| 6 Pack Basswood Sheets for Crafts 1/8x12x18 | Backboard for the mirror assembly | $19.99 | <a href="https://a.co/d/7VZWMLw"> Link </a> |
+| Edge-glued Board by Walnut Hollow, Pine, 12" x 16" x 3/4" | Wood to assemble frame with | $19.50 | <a href="https://a.co/d/bsTsKR3"> Link </a> |
+| Gorilla Heavy Duty Double Sided Mounting Tape, Black Tape, 1" x 120" | Assembling Smart Mirror | $12.24 | <a href="https://a.co/d/elYowfY"> Link </a> |
+| SunFounder Ultimate Starter Kit Compatible with Arduino UNO IDE Scratch, 3 in 1 IoT/Smart Car/Basic Kit | Kit for the RC car | $59.99 | <a href="https://a.co/d/aOOredC"> Link </a> |
+
 
 # Starter Project
 
